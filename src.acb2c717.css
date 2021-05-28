@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+	color: #111;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: radial-gradient(#ececec 1px, #db2d3b 1px);
+	background-size: 20px 20px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+	padding: 1rem 5rem;
+	background: #f3f3f3;
+	margin-bottom: 2rem;
+	box-shadow: 0 1px 11px 3px rgb(0 0 0/21%);
+}
+
+header a {
+	color: #ad343e;
+	font-size: 1.5rem;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+}
+
+.app-body {
+	display: flex;
+	justify-content: center;
+}
+
+/* .search-area {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-direction: column;
+	padding: 0 5rem;
+} */
+
+.search-area form {
+	background-color: #e6c521;
+	width: 22rem;
+	margin: 0 auto;
+	padding: 2rem 1rem 1rem 1rem;
+	border: 3px solid #d8dee6;
+	border-radius: 5px;
+}
+
+/* .search-area label {
+  display: block;
+} */
+
+.search-area input {
+	margin-bottom: 1.9rem;
+	font-size: 1.2rem;
+	height: 1.9rem;
+	width: 20rem;
+}
+
+.search-area button {
+	margin: 0 auto;
+	display: block;
+	padding: 5px 25px;
+	color: white;
+	font-size: 1.1rem;
+	background-color: #ad343e;
+	border: #111 1px solid;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.search-result {
+	background-color: #f3f3f3;
+	/* margin: 2rem 4rem; */
+	/* height: 20px; */
+	border-radius: 9px;
+	/* padding: 30px; */
+	max-width: 1200px;
+	margin: 20px 10px;
+}
+
+/* single video result div - edit this for transition */
+.video-container {
+	/* width: 100%; */
+	display: flex;
+	/* align-items: center; */
+	/* flex-direction: column; */
+	/* overflow: hidden; */
+	padding: 25px 0;
+	border-bottom: #d8dee6 2px solid;
+	margin: 0 30px;
+}
+
+.video-image {
+	margin: 0 20px 0 10px;
+}
+
+/* 
+.video-info h3{
+	margin: 0;
+} 
+*/
+
+.watch-area {
+	background-color: #ececec;
+	max-width: 879px;
+	margin: 0 10px;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.player {
+	/* background-color: white; */
+	/* margin: auto; */
+	/* width: 848.4px; */
+	/* height: 477px; */
+	text-align: center;
+	position: relative;
+	padding-bottom: 56.25%;
+
+	height: 0;
+}
+
+iframe {
+	border-radius: 15px;
+	position: absolute;
+	width: 100%;
+	/* max-width: 848.4px; */
+	height: 100%;
+	top: 0;
+	left: 0;
+	/* width: 848.4px; */
+	/* height: 100%;  */
+}
+
+.video-stats {
+	display: flex;
+	/* background-color: red; */
+	/* justify-content: space-between; */
+}
+
+.video-stats > div:first-child {
+	margin-right: auto;
+}
+
+.video-stats > div:last-child {
+	margin-left: 10px;
+}
+
+
+/*# sourceMappingURL=src.acb2c717.css.map */
