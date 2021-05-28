@@ -116,4 +116,4 @@ var e,t=arguments[3];!function(t,n){"object"==typeof exports&&"undefined"!=typeo
 },{"react":"n8MK","@reach/router":"VJZj","./components/Search":"Uhbr","./components/WatchArea":"drRp"}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(t.default),document.getElementById("root"));
 },{"react":"n8MK","react-dom":"NKHc","./App":"lY9v"}]},{},["Focm"], null)
-//# sourceMappingURL=wetube-react/src.9032ac5f.js.map
+//# sourceMappingURL=wetube-react/src.4db2b994.js.map
