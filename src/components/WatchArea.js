@@ -11,9 +11,7 @@ class WatchArea extends React.Component {
 
 	componentDidMount() {
 		axios
-			.get(
-				`${AppConstant.VIDEO_URL}&id=${this.props.id}`
-			)
+			.get(`${AppConstant.VIDEO_URL}&id=${this.props.id}`)
 			.then((res) => {
 				console.log(res);
 				const item = res.data.items[0];
@@ -34,10 +32,11 @@ class WatchArea extends React.Component {
 	}
 
 	render() {
-		if (this.state.loading){
-			return <h1 className="loader">Loading...</h1>
+		if (this.state.loading) {
+			return <h1 className="loader">Loading...</h1>;
 		}
-		const { title, views, description, channel, likes, dislikes, id } = this.state;
+		const { title, views, description, channel, likes, dislikes, id } =
+			this.state;
 		return (
 			<div className="watch-area">
 				<div className="player">

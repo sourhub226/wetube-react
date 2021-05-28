@@ -1,6 +1,7 @@
 node_modules
 .cache/
 dist/
+build/
 .env
 .DS_Store
 converge/

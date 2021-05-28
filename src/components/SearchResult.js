@@ -6,6 +6,7 @@ const SearchResult = ({ videos }) => {
 		<div className="search-result">
 			{videos.map((video) => {
 				return (
+					
 					<Video
 						key={video.id.videoId}
 						title={video.snippet.title}

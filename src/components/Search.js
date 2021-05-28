@@ -4,15 +4,14 @@ import SearchResult from "./SearchResult";
 import * as AppConstant from "../AppConstant";
 
 const Search = () => {
+	console.log("search.js loaded");
 	const [keyword, setKeyword] = useState("funny dog videos");
 	const [videos, setVideos] = useState([]);
 
 	const requestSearch = () => {
 		console.log("submited");
 		axios
-			.get(
-				`${AppConstant.SEARCH_URL}&q=${keyword}`
-			)
+			.get(`${AppConstant.SEARCH_URL}&q=${keyword}`)
 			.then((res) => {
 				console.log(res);
 				const { items } = res.data;
