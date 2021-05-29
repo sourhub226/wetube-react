@@ -33,7 +33,7 @@ const Search = () => {
 		} else {
 			setAdvancedParams("");
 		}
-	}, [checked, order, safeSearch]);
+	}, [checked,order,safeSearch]);
 
 	const requestSearch = () => {
 		// console.log("submited");
