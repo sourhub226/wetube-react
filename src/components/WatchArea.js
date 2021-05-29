@@ -3,11 +3,12 @@ import React from "react";
 import { VIDEO_URL } from "../AppConstant";
 import ErrorBoundary from "./ErrorBoundary";
 import FormatNumber from "./FormatNumber";
+import SiteError from "./SiteError";
 
 class WatchArea extends React.Component {
 	constructor() {
 		super();
-		this.state = { loading: true };
+		this.state = { loading: true, hasError: false, errorCode: "" };
 	}
 
 	componentDidMount() {
@@ -29,12 +30,20 @@ class WatchArea extends React.Component {
 				});
 			})
 			.catch((err) => {
-				console.log(err);
+				console.log(err.response.status);
+				//add component to show error on site
+				this.setState({
+					hasError: true,
+					errorCode: err.response.status,
+				});
+				console.log("ERROR FOUND IN API");
 			});
 	}
 
 	render() {
-		if (this.state.loading) {
+		if (this.state.hasError) {
+			return <SiteError errorCode={this.state.errorCode} />;
+		} else if (this.state.loading) {
 			return <h1 className="loader">Loading...</h1>;
 		}
 		const { title, views, description, channel, likes, dislikes, id } =
