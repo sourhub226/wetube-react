@@ -6,7 +6,7 @@
 	"main": "src/index.js",
 	"scripts": {
 		"clean_build": "rmdir /Q /S build",
-		"build": "parcel build src/index.html --public-url ./ -d build && shx cp build/index.html build/404.html",
+		"build": "parcel build src/index.html --public-url https://sourhub226.github.io/wetube-react/ -d build && shx cp build/index.html build/404.html",
 		"format": "prettier --write \"src/**/*.{js,jsx}\"",
 		"lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
 		"dev": "parcel src/index.html",
