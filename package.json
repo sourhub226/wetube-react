@@ -6,7 +6,7 @@
 	"main": "src/index.js",
 	"scripts": {
 		"clean_build": "rmdir /Q /S build",
-		"build": "parcel build src/index.html --public-url ./ -d build",
+		"build": "parcel build src/index.html --public-url ./ -d build && shx cp build/index.html build/404.html",
 		"format": "prettier --write \"src/**/*.{js,jsx}\"",
 		"lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
 		"dev": "parcel src/index.html",
@@ -24,7 +24,8 @@
 		"eslint-plugin-react": "^7.23.2",
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"parcel-bundler": "^1.12.5",
-		"prettier": "^2.3.0"
+		"prettier": "^2.3.0",
+		"shx": "^0.3.3"
 	},
 	"dependencies": {
 		"@reach/router": "^1.3.4",
