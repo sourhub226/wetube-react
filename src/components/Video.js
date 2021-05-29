@@ -3,7 +3,6 @@ import React from "react";
 import moment from "moment";
 
 const Video = (props) => {
-	// JSX format
 	return (
 		<Link to={`watch/${props.id}`} className="video-container">
 			<div className="video-image">
