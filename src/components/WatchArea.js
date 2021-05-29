@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import {VIDEO_URL} from "../AppConstant";
+import { VIDEO_URL } from "../AppConstant";
 import ErrorBoundary from "./ErrorBoundary";
 import FormatNumber from "./FormatNumber";
 
@@ -11,6 +11,7 @@ class WatchArea extends React.Component {
 	}
 
 	componentDidMount() {
+		// throw new Error();
 		axios
 			.get(`${VIDEO_URL}&id=${this.props.id}`)
 			.then((res) => {
@@ -69,9 +70,9 @@ class WatchArea extends React.Component {
 }
 
 export default function WatchAreaWithErrorBoundary(props) {
-	return(
+	return (
 		<ErrorBoundary>
-			<WatchArea {...props}/>
+			<WatchArea {...props} />
 		</ErrorBoundary>
-	)
-};
+	);
+}

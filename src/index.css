@@ -53,11 +53,18 @@ header a {
   display: block;
 } */
 
-.search-area input {
-	margin-bottom: 1.9rem;
+.search-area input[type="text"],
+.search-area select {
+	margin-bottom: 1rem;
 	font-size: 1.2rem;
-	height: 1.9rem;
+	/* height: 1.9rem; */
 	width: 20rem;
+}
+
+.search-area input[type="checkbox"] {
+	/* height: 30px; */
+	margin-bottom: 1rem;
+	margin-right: 0.5rem;
 }
 
 .search-area button {

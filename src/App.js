@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "@reach/router";
 import Search from "./components/Search";
 import WatchArea from "./components/WatchArea";
-import {REPO_NAME} from "./AppConstant";
+import { REPO_NAME } from "./AppConstant";
 
 const App = () => {
 	// console.log("app.js loaded");
