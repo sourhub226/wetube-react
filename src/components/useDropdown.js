@@ -8,8 +8,10 @@ const useDropdown = (label, defaultState, options) => {
 
 	const Dropdown = () => {
 		return (
+			
 			<label htmlFor="{id}">
 				{label}
+				<br></br>
 				<select
 					id={id}
 					value={state}
@@ -24,6 +26,7 @@ const useDropdown = (label, defaultState, options) => {
 						);
 					})}
 				</select>
+				<br></br>
 			</label>
 		);
 	};

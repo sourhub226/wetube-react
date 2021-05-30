@@ -4,7 +4,6 @@ import SearchResult from "./SearchResult";
 import { SEARCH_URL } from "../AppConstant";
 import useDropdown from "./useDropdown";
 import SiteError from "./SiteError";
-// import SiteError from "./SiteError";
 
 const Search = () => {
 	console.log("search.js loaded");
@@ -67,15 +66,17 @@ const Search = () => {
 				}}
 			>
 				<label htmlFor="keyword">
-					Search
+					Search<br></br>
 					<input
 						type="text"
+						placeholder="search"
 						id="keyword"
 						value={keyword}
 						onChange={(e) => setKeyword(e.target.value)}
 					/>
 				</label>
 				<label htmlFor="advanced">
+					<br></br>
 					<input
 						type="checkbox"
 						id="advanced"

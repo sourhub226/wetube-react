@@ -1,7 +1,7 @@
 //reactjs.org/docs/error-boundaries.html
 
 import React, { Component } from "react";
-import { Link, Redirect } from "@reach/router";
+import { Redirect } from "@reach/router";
 import { REPO_NAME } from "../AppConstant";
 import CountdownTimer from "./CountdownTimer";
 
@@ -35,7 +35,7 @@ class ErrorBoundary extends Component {
 					There was an error while fetching the video.<br></br>You are
 					being redirected to the homepage in{" "}
 					<CountdownTimer count={10} /> sec.<br></br>
-					<Link to={`/${REPO_NAME}`}>Click here</Link> to go back to
+					<a href={`/${REPO_NAME}`}>Click here</a> to go back to
 					homepage immediately.
 				</h1>
 			);

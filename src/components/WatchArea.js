@@ -31,7 +31,7 @@ class WatchArea extends React.Component {
 			})
 			.catch((err) => {
 				console.log(err.response.status);
-				//add component to show error on site
+			
 				this.setState({
 					hasError: true,
 					errorCode: err.response.status,
@@ -59,7 +59,7 @@ class WatchArea extends React.Component {
 						allowFullScreen
 					></iframe>
 				</div>
-				<h1>{title}</h1>
+				<h2>{title}</h2>
 				<div className="video-stats">
 					<div>
 						<FormatNumber number={views} /> Views
