@@ -8,16 +8,17 @@ const App = () => {
 	// console.log("app.js loaded");
 	// JSX format
 	return (
-		<div>
-			<header>
-				<a href={`/${REPO_NAME}`}>WeTube</a>
-			</header>
-			<div className="app-body">
-				<Router>
-					<Search path={`${REPO_NAME}/`} />
-					<WatchArea path={`/${REPO_NAME}/watch/:id`} />
-				</Router>
+		<div className="app-body">
+			<div className="logo">
+				<a href={`/${REPO_NAME}`}>
+					<span>We</span>Tube
+				</a>
 			</div>
+
+			<Router>
+				<Search path={`${REPO_NAME}/`} />
+				<WatchArea path={`/${REPO_NAME}/watch/:id`} />
+			</Router>
 		</div>
 	);
 };

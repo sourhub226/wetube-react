@@ -11,7 +11,6 @@ const Search = () => {
 	const [videos, setVideos] = useState([]);
 	const [hasError, setError] = useState(false);
 	const [errorCode, setErrorCode] = useState("");
-	// setError(false);
 
 	const [order, OrderDropdown] = useDropdown("Order By", "relevance", [
 		"date",
@@ -96,7 +95,7 @@ const Search = () => {
 				<button>Submit</button>
 			</form>
 			{hasError ? (
-				<SiteError errorCode={errorCode} />
+				<SiteError errorText={`Code: ${errorCode}`} redirect={false} />
 			) : (
 				<SearchResult videos={videos} />
 			)}

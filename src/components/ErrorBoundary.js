@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { Redirect } from "@reach/router";
 import { REPO_NAME } from "../AppConstant";
-import CountdownTimer from "./CountdownTimer";
+import SiteError from "./SiteError";
 
 class ErrorBoundary extends Component {
 	constructor(props) {
@@ -21,7 +21,7 @@ class ErrorBoundary extends Component {
 
 	componentDidUpdate() {
 		if (this.state.hasError) {
-			setTimeout(() => this.setState({ redirect: true }), 10000);
+			setTimeout(() => this.setState({ redirect: true }), 50000);
 		}
 	}
 
@@ -31,13 +31,7 @@ class ErrorBoundary extends Component {
 		}
 		if (this.state.hasError) {
 			return (
-				<h1>
-					There was an error while fetching the video.<br></br>You are
-					being redirected to the homepage in{" "}
-					<CountdownTimer count={10} /> sec.<br></br>
-					<a href={`/${REPO_NAME}`}>Click here</a> to go back to
-					homepage immediately.
-				</h1>
+				<SiteError errorText="Internal error" redirect={true} />
 			);
 		}
 		return this.props.children;

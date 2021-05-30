@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { VIDEO_URL } from "../AppConstant";
 import ErrorBoundary from "./ErrorBoundary";
+import Expire from "./Expire";
 import FormatNumber from "./FormatNumber";
 import SiteError from "./SiteError";
 
@@ -31,7 +32,7 @@ class WatchArea extends React.Component {
 			})
 			.catch((err) => {
 				console.log(err.response.status);
-			
+
 				this.setState({
 					hasError: true,
 					errorCode: err.response.status,
@@ -42,9 +43,18 @@ class WatchArea extends React.Component {
 
 	render() {
 		if (this.state.hasError) {
-			return <SiteError errorCode={this.state.errorCode} />;
+			return (
+				<SiteError
+					errorText={`Code: ${this.state.errorCode}`}
+					redirect={false}
+				/>
+			);
 		} else if (this.state.loading) {
-			return <h1 className="loader">Loading...</h1>;
+			return (
+				<Expire delay="10000">
+					<h1 className="loader">Loading...</h1>
+				</Expire>
+			);
 		}
 		const { title, views, description, channel, likes, dislikes, id } =
 			this.state;
