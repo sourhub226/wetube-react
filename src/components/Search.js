@@ -4,6 +4,12 @@ import SearchResult from "./SearchResult";
 import { SEARCH_URL } from "../AppConstant";
 import useDropdown from "./useDropdown";
 import SiteError from "./SiteError";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faSearch,
+	faSortAmountDownAlt,
+	faUserShield,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Search = () => {
 	console.log("search.js loaded");
@@ -12,17 +18,17 @@ const Search = () => {
 	const [hasError, setError] = useState(false);
 	const [errorCode, setErrorCode] = useState("404");
 	const [loading, setLoading] = useState(false);
-	const [order, OrderDropdown] = useDropdown("Order By", "relevance", [
-		"date",
+	const [order, OrderDropdown] = useDropdown(
+		"Order By",
 		"relevance",
-		"rating",
-		"title",
-		"viewCount",
-	]);
+		faSortAmountDownAlt,
+		["date", "relevance", "rating", "title", "viewCount"]
+	);
 
 	const [safeSearch, SafeSearchDropdown] = useDropdown(
 		"Safe Search",
 		"none",
+		faUserShield,
 		["moderate", "none", "strict"]
 	);
 
@@ -67,24 +73,28 @@ const Search = () => {
 				}}
 			>
 				<label htmlFor="keyword">
-					Search<br></br>
-					<input
-						type="text"
-						placeholder="search"
-						id="keyword"
-						value={keyword}
-						onChange={(e) => setKeyword(e.target.value)}
-					/>
+					<p>
+						<FontAwesomeIcon icon={faSearch} className="fa-icon" />
+						Search
+					</p>
 				</label>
+				<input
+					type="text"
+					placeholder="search"
+					id="keyword"
+					value={keyword}
+					onChange={(e) => setKeyword(e.target.value)}
+				/>
+				<input
+					type="checkbox"
+					id="advanced"
+					checked={checked}
+					onChange={() => setChecked(!checked)}
+				/>
+
 				<label htmlFor="advanced">
-					<br></br>
-					<input
-						type="checkbox"
-						id="advanced"
-						checked={checked}
-						onChange={() => setChecked(!checked)}
-					></input>
-					Advanced Search<br></br>
+					<div className="custom-checkbox"></div>
+					<p>Advanced Search</p>
 				</label>
 
 				{checked ? (

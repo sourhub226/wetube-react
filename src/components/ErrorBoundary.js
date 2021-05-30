@@ -30,9 +30,7 @@ class ErrorBoundary extends Component {
 			return <Redirect to={`/${REPO_NAME}`} noThrow />;
 		}
 		if (this.state.hasError) {
-			return (
-				<SiteError errorText="Internal error" redirect={true} />
-			);
+			return <SiteError errorText="Internal error" redirect={true} />;
 		}
 		return this.props.children;
 	}

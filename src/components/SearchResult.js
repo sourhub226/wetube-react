@@ -1,16 +1,16 @@
 import React from "react";
 import SpinLoader from "./SpinLoader";
-import Video from "./Video";
+import VideoSnippet from "./VideoSnippet";
 
-const SearchResult = ({ videos,loading }) => {
+const SearchResult = ({ videos, loading }) => {
 	return (
 		<div className="search-result">
 			{loading ? (
-				<SpinLoader/>
+				<SpinLoader />
 			) : (
 				videos.map((video) => {
 					return (
-						<Video
+						<VideoSnippet
 							key={video.id.videoId}
 							title={video.snippet.title}
 							dateAdded={video.snippet.publishedAt}

@@ -10,7 +10,13 @@ const Expire = (props) => {
 		}, props.delay);
 	}, [props.delay]);
 
-	return visible ? <div>{props.children}</div> : <div><SiteError errorText="Unable to fetch video"></SiteError></div>;
+	return visible ? (
+		<div>{props.children}</div>
+	) : (
+		<div>
+			<SiteError errorText="Unable to fetch video"></SiteError>
+		</div>
+	);
 };
 
 export default Expire;

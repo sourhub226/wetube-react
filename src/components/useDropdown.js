@@ -1,17 +1,21 @@
 //custom hook
 
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const useDropdown = (label, defaultState, options) => {
+const useDropdown = (label, defaultState, icon, options) => {
 	const [state, setState] = useState(defaultState);
 	const id = `use-dropdown-${label.replace(" ", "").toLowerCase()}`;
 
 	const Dropdown = () => {
 		return (
-			
-			<label htmlFor="{id}">
-				{label}
-				<br></br>
+			<div>
+				<label htmlFor="{id}">
+					<p>
+						<FontAwesomeIcon icon={icon} className="fa-icon" />
+						{label}
+					</p>
+				</label>
 				<select
 					id={id}
 					value={state}
@@ -26,8 +30,7 @@ const useDropdown = (label, defaultState, options) => {
 						);
 					})}
 				</select>
-				<br></br>
-			</label>
+			</div>
 		);
 	};
 	return [state, Dropdown, setState];
