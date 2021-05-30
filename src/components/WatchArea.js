@@ -5,6 +5,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import Expire from "./Expire";
 import FormatNumber from "./FormatNumber";
 import SiteError from "./SiteError";
+import SpinLoader from "./SpinLoader";
 
 class WatchArea extends React.Component {
 	constructor() {
@@ -52,7 +53,7 @@ class WatchArea extends React.Component {
 		} else if (this.state.loading) {
 			return (
 				<Expire delay="10000">
-					<h1 className="loader">Loading...</h1>
+					<SpinLoader/>
 				</Expire>
 			);
 		}
@@ -62,7 +63,7 @@ class WatchArea extends React.Component {
 			<div className="watch-area">
 				<div className="player">
 					<iframe
-						src={`//www.youtube.com/embed/${id}?autoplay=0`}
+						src={`//www.youtube.com/embed/${id}?autoplay=1`}
 						frameBorder="0"
 						title={title}
 						allow="autoplay; encrypted-media"

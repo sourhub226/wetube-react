@@ -26,7 +26,7 @@ body {
 	margin: 40px auto;
 	font-size: 40px;
 	font-weight: 700;
-	padding: 20px;
+	padding: 15px;
 	background-color: #fff;
 	border-radius: 20px;
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@ body {
 
 .logo span {
 	background-color: #f34d4b;
-	padding: 5px;
+	padding: 3px 7px;
 	border-radius: 10px;
 	margin-right: 5px;
 	color: white;
@@ -301,4 +301,30 @@ h6 {
 		width: 100%;
 		margin-bottom: 10px;
 	}
+}
+
+.dots div {
+    height: 50px;
+	width: 5px;
+    background-color:#F34D4B;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate360 1.2s ease-in-out infinite;
+    animation-delay: calc(70ms * var(--d));
+}
+
+@keyframes rotate360 {
+    0%{
+        /* width: 5px; */
+        opacity: 0.5;
+    }
+    50%{
+        /* width: 15px; */
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+        
+    }
+
 }

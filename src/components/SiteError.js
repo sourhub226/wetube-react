@@ -30,7 +30,7 @@ const SiteError = (props) => {
 				{props.redirect ? (
 					<div className="error-redirect">
 						You are being automatically redirected to the homepage
-						in <CountdownTimer count={50} /> sec
+						in <CountdownTimer count={20} /> sec
 					</div>
 				) : null}
 

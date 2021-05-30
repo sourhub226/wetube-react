@@ -10,8 +10,8 @@ const Search = () => {
 	const [keyword, setKeyword] = useState("funny dog videos");
 	const [videos, setVideos] = useState([]);
 	const [hasError, setError] = useState(false);
-	const [errorCode, setErrorCode] = useState("");
-
+	const [errorCode, setErrorCode] = useState("404");
+	const [loading, setLoading] = useState(false);
 	const [order, OrderDropdown] = useDropdown("Order By", "relevance", [
 		"date",
 		"relevance",
@@ -40,12 +40,14 @@ const Search = () => {
 
 	const requestSearch = () => {
 		// console.log("submited");
+		setLoading(true);
 		axios
 			.get(`${SEARCH_URL}&q=${keyword}${advancedParams}`)
 			.then((res) => {
 				console.log(res);
 				const { items } = res.data;
 				setVideos(items);
+				setLoading(false);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -97,7 +99,7 @@ const Search = () => {
 			{hasError ? (
 				<SiteError errorText={`Code: ${errorCode}`} redirect={false} />
 			) : (
-				<SearchResult videos={videos} />
+				<SearchResult videos={videos} loading={loading} />
 			)}
 		</div>
 	);
