@@ -6,6 +6,15 @@ import Expire from "./Expire";
 import FormatNumber from "./FormatNumber";
 import SiteError from "./SiteError";
 import SpinLoader from "./SpinLoader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faEye,
+	faPenAlt,
+	faPlayCircle,
+	faThumbsDown,
+	faThumbsUp,
+	faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 class WatchArea extends React.Component {
 	constructor() {
@@ -63,27 +72,60 @@ class WatchArea extends React.Component {
 			<div className="watch-area">
 				<div className="player">
 					<iframe
-						src={`//www.youtube.com/embed/${id}?autoplay=1`}
+						src={`//www.youtube.com/embed/${id}?autoplay=0`}
 						frameBorder="0"
 						title={title}
 						allow="autoplay; encrypted-media"
 						allowFullScreen
 					></iframe>
 				</div>
-				<h2>{title}</h2>
+				<h3 className="title">
+					<FontAwesomeIcon icon={faPlayCircle} className="fa-icon" />
+					{title}
+				</h3>
 				<div className="video-stats">
+					<h4 className="channel-name">
+						<FontAwesomeIcon
+							icon={faUserCircle}
+							className="fa-icon"
+						/>
+						{channel}
+					</h4>
 					<div>
-						<FormatNumber number={views} /> Views
-					</div>
-					<div>
-						<FormatNumber number={likes} /> Likes
-					</div>
-					<div>
-						<FormatNumber number={dislikes} /> Dislikes
+						<h5>
+							<FontAwesomeIcon icon={faEye} className="fa-icon" />
+							<FormatNumber number={views} /> Views
+						</h5>
+						<h5>
+							<FontAwesomeIcon
+								icon={faThumbsUp}
+								className="fa-icon"
+							/>
+							<FormatNumber number={likes} /> Likes
+						</h5>
+						<h5>
+							<FontAwesomeIcon
+								icon={faThumbsDown}
+								className="fa-icon"
+							/>
+							<FormatNumber number={dislikes} /> Dislikes
+						</h5>
 					</div>
 				</div>
-				<div className="channel-name">{channel}</div>
-				<p>{description}</p>
+				<div className="description">
+					<span>
+						<FontAwesomeIcon icon={faPenAlt} className="fa-icon" />
+						Description<br></br>
+					</span>
+					<p
+						dangerouslySetInnerHTML={{
+							__html: `${description.replace(
+								/(https?:\/\/[^\s]+)/g,
+								"<a href='$1'>$1</a>"
+							)}`,
+						}}
+					></p>
+				</div>
 			</div>
 		);
 	}

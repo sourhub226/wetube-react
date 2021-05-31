@@ -15,10 +15,14 @@ const VideoSnippet = (props) => {
 				<img src={props.thumbnail.url} alt="video thumbnail" />
 			</div>
 			<div className="video-snippet-info">
-				<h3>
+				<div className="video-snippet-title">
 					<FontAwesomeIcon icon={faPlayCircle} className="fa-icon" />
-					{props.title}
-				</h3>
+					<h3
+						dangerouslySetInnerHTML={{
+							__html: `${props.title}`,
+						}}
+					></h3>
+				</div>
 				<div className="video-snippet-stats">
 					<h5>
 						<FontAwesomeIcon
