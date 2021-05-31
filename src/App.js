@@ -1,5 +1,5 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { Redirect, Router } from "@reach/router";
 import Search from "./components/Search";
 import WatchArea from "./components/WatchArea";
 import { REPO_NAME } from "./AppConstant";
@@ -18,6 +18,7 @@ const App = () => {
 			<Router>
 				<Search path={`${REPO_NAME}/`} />
 				<WatchArea path={`/${REPO_NAME}/watch/:id`} />
+				<Redirect from="*" to={`/${REPO_NAME}`} />
 			</Router>
 		</div>
 	);
