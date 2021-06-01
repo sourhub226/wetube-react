@@ -61,7 +61,7 @@ class WatchArea extends React.Component {
 			);
 		} else if (this.state.loading) {
 			return (
-				<Expire delay="15000">
+				<Expire delay="10000">
 					<SpinLoader />
 				</Expire>
 			);

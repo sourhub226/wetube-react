@@ -87,13 +87,13 @@ const Search = () => {
 				/>
 				<input
 					type="checkbox"
-					id="advanced"
+					id="advanced-search-toggle"
 					checked={checked}
 					onChange={() => setChecked(!checked)}
 				/>
 
-				<label htmlFor="advanced">
-					<div className="custom-checkbox"></div>
+				<label htmlFor="advanced-search-toggle">
+					<div className="advanced-search-checkbox"></div>
 					<p>Advanced Search</p>
 				</label>
 
