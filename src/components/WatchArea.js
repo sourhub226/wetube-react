@@ -72,7 +72,7 @@ class WatchArea extends React.Component {
 			<div className="watch-area">
 				<div className="player">
 					<iframe
-						src={`//www.youtube.com/embed/${id}?autoplay=0`}
+						src={`//www.youtube.com/embed/${id}?autoplay=1`}
 						frameBorder="0"
 						title={title}
 						allow="autoplay; encrypted-media"

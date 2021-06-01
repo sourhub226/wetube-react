@@ -15,7 +15,7 @@ body.light-mode {
 	--text: #1c1a1f;
 	--text-alt: white;
 	--label: #e0e0e9;
-	--logo: #ff5451;
+	--logo: #ff4040;
 	--app-bg-dots: #c9c9c9;
 	--error-svg: url(icons/error-icon-light.svg);
 }
@@ -25,7 +25,7 @@ body.dark-mode {
 	--text: #f3f3f9;
 	--text-alt: #222;
 	--label: #1c1a1f;
-	--logo: #ff5451;
+	--logo: #ff4040;
 	--app-bg-dots: #772221;
 	--error-svg: url(icons/error-icon-dark.svg);
 }
