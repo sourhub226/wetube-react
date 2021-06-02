@@ -159,12 +159,13 @@ form label p,
 	right: 0;
 	bottom: 0;
 	margin: 20px;
+	z-index: 10;
 }
 .dark-mode-container .button {
 	cursor: pointer;
 	padding: 10px;
 	position: relative;
-	background-color: #222;
+	background-color: var(--text);
 	border-radius: 50%;
 	border-bottom: 2px solid var(--logo);
 	display: flex;
@@ -173,10 +174,6 @@ form label p,
 .dark-mode-container .button .dark-fa-icon {
 	margin: auto;
 	font-size: 20px;
-}
-
-#dark-mode-toggle:checked + label .button {
-	background-color: white;
 }
 
 #dark-mode-toggle:checked + label .button .dark-fa-icon > path {
