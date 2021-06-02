@@ -1,4 +1,4 @@
-<p align="center"><img src="app-logo.svg" width="200"></p>
+[<p align="center"><img src="app-logo.svg" width="200"></p>](https://sourhub226.github.io/wetube-react/)
 <p align="center"> A YouTube like video streaming app built using ReactJS.</p>
 
 ### Features:
