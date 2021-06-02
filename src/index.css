@@ -15,8 +15,6 @@ body.light-mode {
 	--text: #1c1a1f;
 	--text-alt: white;
 	--label: #e0e0e9;
-	--logo: #ff4040;
-	--app-bg-dots: #c9c9c9;
 	--error-svg: url(icons/error-icon-light.svg);
 }
 body.dark-mode {
@@ -25,16 +23,12 @@ body.dark-mode {
 	--text: #f3f3f9;
 	--text-alt: #222;
 	--label: #1c1a1f;
-	--logo: #ff4040;
-	--app-bg-dots: #772221;
 	--error-svg: url(icons/error-icon-dark.svg);
 }
 
 body {
-	background-image: radial-gradient(
-		var(--app-bg-dots) 1.5px,
-		var(--label) 1px
-	);
+	--logo: #fe5722;
+	background-image: radial-gradient(var(--logo) 0.1px, var(--label) 1.5px);
 	background-size: 20px 20px;
 	font-family: "Ubuntu", sans-serif;
 }
