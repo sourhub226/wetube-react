@@ -18,11 +18,16 @@ A YouTube like video streaming app built using ReactJS.
 2. Move to root directory of the project 
 
         cd wetube-react
+     
+3. Obtain a developer key for YouTube API v3 from [here](https://developers.google.com/youtube/registering_an_application)
+4. Create a `.env` file based on `.env.template` provided and put the above obtained key in it. <br>The contents of the `.env` file should look something like this:
 
-3. Install all required npm packages
+        API_KEY=XXXXXXXXXXXXXXXXXXXXXXXX
+        
+5. Install all required npm packages
 
         npm install
     
-4. Run the app
+6. Run the app
 
         npm run dev
