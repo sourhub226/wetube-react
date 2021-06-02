@@ -8,7 +8,12 @@ A YouTube like video streaming app built using ReactJS.
 - Advanced search to filter search results by order, duration, etc.
 - Dark mode to reduce eye strain while binge watching.
 
-<!--- put pic here --->
+### App screenshots:
+
+Light mode                                 |  Dark mode
+:-----------------------------------------:|:------------------------------------------:
+![](screenshots/homepage-light-min.png)    |  ![](screenshots/homepage-dark-min.png)
+![](screenshots/watch-area-light-min.png)  |  ![](screenshots/watch-area-dark-min.png)
 
 ### Running the app: 
 1. Clone the project repo
