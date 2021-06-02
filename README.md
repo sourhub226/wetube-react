@@ -1,7 +1,5 @@
-# WeTube 
-<!--- replace the above text with logo --->
-
-A YouTube like video streaming app built using ReactJS.
+<p align="center"><img src="app-logo.svg" width="200"></p>
+<p align="center"> A YouTube like video streaming app built using ReactJS.</p>
 
 ### Features:
 - YouTube API allowing searching and playing videos directly from YouTube.
@@ -9,7 +7,6 @@ A YouTube like video streaming app built using ReactJS.
 - Dark mode to reduce eye strain while binge watching.
 
 ### App screenshots:
-
 Light mode                                 |  Dark mode
 :-----------------------------------------:|:------------------------------------------:
 ![](screenshots/homepage-light-min.png)    |  ![](screenshots/homepage-dark-min.png)
