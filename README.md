@@ -1,9 +1,13 @@
 [<p align="center"><img src="app-logo.svg" width="200"></p>](https://sourhub226.github.io/wetube-react/)
 <p align="center"> A YouTube like video streaming app built using ReactJS.</p>
 
+<!-- Badges -->
 <p align="center">
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="Made with React">
         <img src="https://img.shields.io/static/v1?label=Youtube%20API&message=v3&color=white&labelColor=ff0000&logo=youtube" alt="Youtube api">      
+        <a href="https://www.codefactor.io/repository/github/sourhub226/wetube-react">
+                <img src="https://www.codefactor.io/repository/github/sourhub226/wetube-react/badge" alt="CodeFactor">
+        </a>
         <img src="https://github.com/sourhub226/wetube-react/actions/workflows/main.yml/badge.svg" alt="Github pages deploy">
         <a href="https://github.com/sourhub226/wetube-react/issues">
                 <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome">
