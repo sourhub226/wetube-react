@@ -15,16 +15,22 @@
         <img src="https://views.whatilearened.today/views/github/sourhub226/todo-list-react.svg" alt="ViewCount">
 </p>
 
+---
+
 ### Features:
 - YouTube API allowing searching and playing videos directly from YouTube.
 - Advanced search to filter search results by order, duration, etc.
 - Dark mode to reduce eye strain while binge watching.
+
+---
 
 ### App screenshots:
 Light mode                                 |  Dark mode
 :-----------------------------------------:|:------------------------------------------:
 ![](screenshots/homepage-light-min.png)    |  ![](screenshots/homepage-dark-min.png)
 ![](screenshots/watch-area-light-min.png)  |  ![](screenshots/watch-area-dark-min.png)
+
+---
 
 ### Running the app: 
 1. Clone the project repo
