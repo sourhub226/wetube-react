@@ -6,28 +6,28 @@
 	margin: 0;
 	padding: 0;
 	color: var(--text);
-	transition: all 0.3s ease;
 }
 
 body.light-mode {
 	--bg-color: #f4f4fb;
 	--bg-color-alt: white;
-	--text: #1c1a1f;
+	--text: #202124;
 	--text-alt: white;
-	--label: #e0e0e9;
+	--label: #dfdfec;
 	--error-svg: url(icons/error-icon-light.svg);
 }
+
 body.dark-mode {
-	--bg-color: #3d3a41;
-	--bg-color-alt: #27242c;
-	--text: #f3f3f9;
-	--text-alt: #222;
-	--label: #1c1a1f;
+	--bg-color: #303134;
+	--bg-color-alt: #202124;
+	--text: #f4f4fb;
+	--text-alt: #202124;
+	--label: #202124;
 	--error-svg: url(icons/error-icon-dark.svg);
 }
 
 body {
-	--logo: #fe5722;
+	--logo: #6495ed;
 	background-image: radial-gradient(var(--logo) 0.1px, var(--label) 1.5px);
 	background-size: 20px 20px;
 	font-family: "Ubuntu", sans-serif;
@@ -109,7 +109,7 @@ form label p,
 
 .search-area input[type="text"],
 .search-area input[type="text"]::placeholder {
-	color: #aeaeb8;
+	color: #a4a5bd;
 }
 
 .search-area input[type="text"]:hover,
@@ -145,6 +145,7 @@ form label p,
 	position: relative;
 	background-color: var(--logo);
 }
+
 #advanced-search-toggle:checked + label .advanced-search-checkbox::after {
 	content: "\2713";
 	position: absolute;
@@ -159,8 +160,9 @@ form label p,
 	right: 0;
 	bottom: 0;
 	margin: 20px;
-	z-index: 10;
+	z-index: 5;
 }
+
 .dark-mode-container .button {
 	cursor: pointer;
 	padding: 10px;
@@ -244,10 +246,12 @@ form label p,
 .dark-mode-container .button .dark-fa-icon > path {
 	color: var(--text-alt);
 }
+
 .video-snippet-title .fa-icon,
 .watch-area .title .fa-icon {
 	font-size: 23px;
 }
+
 .video-snippet-image img {
 	border-radius: 10px;
 }
@@ -263,7 +267,7 @@ form label p,
 }
 
 .watch-area {
-	background-color: var(--bg-color-alt);
+	background-color: var(--bg-color);
 	max-width: 879px;
 	width: 95vw;
 	padding: 15px;
@@ -291,7 +295,7 @@ form label p,
 .watch-area .description {
 	white-space: pre-wrap;
 	word-break: break-word;
-	background-color: var(--bg-color);
+	background-color: var(--bg-color-alt);
 	padding: 0 10px 10px;
 	border-radius: 10px;
 	font-size: 15px;
@@ -300,9 +304,15 @@ form label p,
 .watch-area .description span {
 	line-height: 2.5;
 }
+
+body.dark-mode .watch-area .description span {
+	background-color: #303134;
+}
+
 .watch-area .description p {
 	line-height: 1.4;
 }
+
 .watch-area .description p a:link,
 :visited {
 	color: var(--logo);
@@ -313,6 +323,7 @@ form label p,
 	flex-wrap: wrap;
 	margin: 15px 0;
 }
+
 .watch-area .video-stats .fa-icon {
 	font-size: 15px;
 }
@@ -332,7 +343,7 @@ form label p,
 }
 
 .error-area {
-	background-color: var(--logo);
+	background-color: #f04144;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -341,6 +352,7 @@ form label p,
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 10;
 }
 
 .error-box {
@@ -355,11 +367,12 @@ form label p,
 .error-info {
 	padding: 10px;
 	border-radius: 15px;
-	background: var(--error-svg) var(--logo);
+	background: var(--error-svg) #f04144;
 	background-repeat: no-repeat;
 	background-position: 95%;
 	background-size: 45px;
 }
+
 .error-info h1,
 .error-info h6 {
 	color: var(--text-alt);
@@ -382,11 +395,12 @@ form label p,
 }
 
 .error-box h4 {
-	background-color: #008fff;
+	background-color: #4a8cee;
 	padding: inherit;
 	border-radius: 15px;
 	text-align: center;
 }
+
 .error-box a {
 	color: var(--text-alt);
 }
@@ -457,7 +471,6 @@ form label p,
 	.video-snippet-info > *:first-child {
 		margin-top: 5px;
 	}
-
 	.watch-area .video-stats > *:nth-child(2) > h5 {
 		display: flex;
 		flex-direction: column;
