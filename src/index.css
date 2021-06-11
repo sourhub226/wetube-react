@@ -228,6 +228,7 @@ form label p,
 
 .video-snippet-info > * {
 	margin: 15px 0;
+	word-break: break-word;
 }
 
 .video-snippet-title,
@@ -252,8 +253,28 @@ form label p,
 	font-size: 23px;
 }
 
+.video-snippet-image {
+	position: relative;
+	display: flex;
+}
+
+.video-snippet-image::after {
+	content: attr(data-duration);
+	background-color: var(--logo);
+	color: var(--text-alt);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 7px;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 4px;
+	border-radius: 5px;
+}
+
 .video-snippet-image img {
 	border-radius: 10px;
+	object-fit: cover;
 }
 
 .video-snippet-stats {
@@ -466,7 +487,7 @@ body.dark-mode .watch-area .description span {
 		width: 100%;
 	}
 	.video-snippet-info {
-		margin: 0;
+		margin: 5px 0 0;
 	}
 	.video-snippet-info > *:first-child {
 		margin-top: 5px;

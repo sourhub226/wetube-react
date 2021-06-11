@@ -11,13 +11,14 @@ const SearchResult = ({ videos, loading }) => {
 				videos.map((video) => {
 					return (
 						<VideoSnippet
-							key={video.id.videoId}
+							key={video.id}
 							title={video.snippet.title}
 							dateAdded={video.snippet.publishedAt}
 							channel={video.snippet.channelTitle}
 							thumbnail={video.snippet.thumbnails.medium}
 							description={video.snippet.description}
-							id={video.id.videoId}
+							id={video.id}
+							duration={video.contentDetails.duration}
 						/>
 					);
 				})

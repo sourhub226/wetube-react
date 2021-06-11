@@ -27,7 +27,7 @@ class WatchArea extends React.Component {
 		axios
 			.get(`${VIDEO_URL}&id=${this.props.id}`)
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
 				const item = res.data.items[0];
 				this.setState({
 					title: item.snippet.title,
@@ -41,7 +41,7 @@ class WatchArea extends React.Component {
 				});
 			})
 			.catch((err) => {
-				console.log(err.response.status);
+				console.log(err);
 
 				this.setState({
 					hasError: true,

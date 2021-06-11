@@ -7,11 +7,18 @@ import {
 	faPlayCircle,
 	faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import "moment-duration-format";
 
 const VideoSnippet = (props) => {
 	return (
 		<Link to={`watch/${props.id}`} className="video-snippet-container">
-			<div className="video-snippet-image">
+			<div
+				className="video-snippet-image"
+				data-duration={moment
+					.duration(props.duration)
+					.format("hh:mm:ss")
+					.replace(/00:/, "")}
+			>
 				<img src={props.thumbnail.url} alt="video thumbnail" />
 			</div>
 			<div className="video-snippet-info">
