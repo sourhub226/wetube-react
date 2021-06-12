@@ -25,10 +25,11 @@
 ---
 
 ### App screenshots:
-Light mode                                 |  Dark mode
-:-----------------------------------------:|:------------------------------------------:
-![](screenshots/homepage-light-min.png)    |  ![](screenshots/homepage-dark-min.png)
-![](screenshots/watch-area-light-min.png)  |  ![](screenshots/watch-area-dark-min.png)
+Light mode                                        |Dark mode
+:------------------------------------------------:|:-----------------------------------------------:
+![](screenshots/advanced-search-light-min.png)    |![](screenshots/advanced-search-dark-min.png)
+![](screenshots/homepage-light-min.png)           |![](screenshots/homepage-dark-min.png)
+![](screenshots/watch-area-light-min.png)         |![](screenshots/watch-area-dark-min.png)
 
 ---
 
