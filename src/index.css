@@ -244,7 +244,9 @@ form label p,
 .video-snippet-title .fa-icon > path,
 .video-snippet-title h3,
 .watch-area .title .fa-icon > path,
-.dark-mode-container .button .dark-fa-icon > path {
+.dark-mode-container .button .dark-fa-icon > path,
+.video-snippet-image h1,
+.video-snippet-image .fa-icon > path {
 	color: var(--text-alt);
 }
 
@@ -258,18 +260,24 @@ form label p,
 	display: flex;
 }
 
-.video-snippet-image::after {
-	content: attr(data-duration);
+.video-snippet-image .views,
+.video-snippet-image .duration {
 	background-color: var(--logo);
-	color: var(--text-alt);
 	position: absolute;
-	right: 0;
 	bottom: 0;
 	margin: 7px;
-	font-size: 13px;
-	font-weight: bold;
+	font-size: 6px;
 	padding: 4px;
 	border-radius: 5px;
+	display: flex;
+}
+
+.video-snippet-image .duration {
+	right: 0;
+}
+
+.video-snippet-image .fa-icon {
+	font-size: 13px;
 }
 
 .video-snippet-image img {

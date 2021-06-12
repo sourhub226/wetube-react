@@ -6,6 +6,7 @@ import useDropdown from "./useDropdown";
 import SiteError from "./SiteError";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+	faClock,
 	faSearch,
 	faSortAmountDownAlt,
 	faUserShield,
@@ -32,17 +33,26 @@ const Search = () => {
 		["moderate", "none", "strict"]
 	);
 
+	const [videoDuration, VideoDurationDropdown] = useDropdown(
+		"Video Duration",
+		"any",
+		faClock,
+		["any", "long", "medium", "short"]
+	);
+
 	const [checked, setChecked] = useState(false);
 
 	const [advancedParams, setAdvancedParams] = useState(``);
 
 	useEffect(() => {
-		if (checked) {
-			setAdvancedParams(`&order=${order}&safeSearch=${safeSearch}`);
+		if (!checked) {
+			setAdvancedParams(
+				`&order=${order}&safeSearch=${safeSearch}&videoDuration=${videoDuration}`
+			);
 		} else {
 			setAdvancedParams("");
 		}
-	}, [checked, order, safeSearch]);
+	}, [checked, order, safeSearch, videoDuration]);
 
 	const requestSearch = () => {
 		// console.log("submited");
@@ -124,10 +134,11 @@ const Search = () => {
 					<div>
 						<OrderDropdown />
 						<SafeSearchDropdown />
+						<VideoDurationDropdown />
 					</div>
 				) : null}
 
-				<button>Submit</button>
+				<button onClick={() => setChecked(false)}>Submit</button>
 			</form>
 			{hasError ? (
 				<SiteError errorText={`Code: ${errorCode}`} redirect={false} />

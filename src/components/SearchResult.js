@@ -19,6 +19,7 @@ const SearchResult = ({ videos, loading }) => {
 							description={video.snippet.description}
 							id={video.id}
 							duration={video.contentDetails.duration}
+							views={video.statistics.viewCount}
 						/>
 					);
 				})
