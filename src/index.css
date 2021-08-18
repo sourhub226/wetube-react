@@ -48,6 +48,10 @@ body {
 	background-color: var(--bg-color);
 	border-radius: 20px;
 	border-bottom: 4px solid var(--logo);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .logo a {
@@ -90,6 +94,8 @@ form label p,
 .watch-area .description span {
 	font-size: 1.1rem;
 	background-color: var(--label);
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	padding: 5px;
 	border-radius: 10px;
@@ -107,9 +113,25 @@ form label p,
 	background-color: var(--bg-color-alt);
 }
 
+.search-area input[type="text"]::-webkit-input-placeholder {
+	color: #aaaabb;
+}
+
+.search-area input[type="text"]::-moz-placeholder {
+	color: #aaaabb;
+}
+
+.search-area input[type="text"]:-ms-input-placeholder {
+	color: #aaaabb;
+}
+
+.search-area input[type="text"]::-ms-input-placeholder {
+	color: #aaaabb;
+}
+
 .search-area input[type="text"],
 .search-area input[type="text"]::placeholder {
-	color: #a4a5bd;
+	color: #aaaabb;
 }
 
 .search-area input[type="text"]:hover,
@@ -282,6 +304,7 @@ form label p,
 
 .video-snippet-image img {
 	border-radius: 10px;
+	-o-object-fit: cover;
 	object-fit: cover;
 }
 
@@ -386,6 +409,8 @@ body.dark-mode .watch-area .description span {
 
 .error-box {
 	background-color: var(--bg-color-alt);
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	border-radius: 20px;
 	padding: 10px;
@@ -450,8 +475,22 @@ body.dark-mode .watch-area .description span {
 	background-color: var(--logo);
 	border-radius: 50%;
 	position: absolute;
+	-webkit-animation: rotate360 1.2s ease-in-out infinite;
 	animation: rotate360 1.2s ease-in-out infinite;
+	-webkit-animation-delay: calc(70ms * var(--d));
 	animation-delay: calc(70ms * var(--d));
+}
+
+@-webkit-keyframes rotate360 {
+	0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes rotate360 {
