@@ -35,7 +35,7 @@
 		"axios": "^0.21.1",
 		"gh-pages": "^3.2.0",
 		"mo": "^1.7.3",
-		"moment": "^2.29.1",
+		"moment": "^2.29.4",
 		"moment-duration-format": "^2.3.2",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
